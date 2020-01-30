@@ -2,8 +2,9 @@
 Url: https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
 
 # Prereq Commands
+```bash
 kubectl get namespace
-
+```
 # Install Kubernetes Dashboard
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml
 
@@ -36,7 +37,7 @@ kubectl -n kubernetes dashboard get service
 kubectl get nodes -o wide
 
 # Access the Kubernetes Dashboard through the Browser using the IP of one of the Worker Nodes
-# for example URL: https://192.168.0.8:32323 
+# for example URL: https://192.168.0.8:32323
 
 # Login to the Kubernetes Dashboard using Token
 # Get the Token for the service account
