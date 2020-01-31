@@ -129,3 +129,6 @@ kubectl get pods -namespace kubernetes-dashboard kubernetes-dashboard-5996555fd8
 # Query Output of json/yaml with jq/yq
 kubectl get pods -namespace kubernetes-dashboard kubernetes-dashboard-5996555fd8-vl4bh -o json | jq ".metadata.ownerReferences[]"
 kubectl get pods -namespace kubernetes-dashboard kubernetes-dashboard-5996555fd8-vl4bh -o yaml | yq ".metadata.ownerReferences[]"
+
+# Exec Command to login to the Container
+kubectl exec -it <deployment-name/pod-name> /bin/bash
