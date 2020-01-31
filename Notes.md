@@ -112,4 +112,20 @@ Kubernetes:
 - role based access control (rbac) with Auth0
 
 # Show lables on pods
-kubectl -n demo get pods --show-lables
+kubectl -n demo get pods --show-labels
+
+# Output to json
+kubectl get pods -namespace kubernetes-dashboard kubernetes-dashboard-5996555fd8-vl4bh -o json
+
+# Output to yaml
+kubectl get pods -namespace kubernetes-dashboard kubernetes-dashboard-5996555fd8-vl4bh -o yaml
+
+# Export Output to json
+kubectl get pods -namespace kubernetes-dashboard kubernetes-dashboard-5996555fd8-vl4bh --export -o json
+
+# Export Output to yaml
+kubectl get pods -namespace kubernetes-dashboard kubernetes-dashboard-5996555fd8-vl4bh --export -o yaml
+
+# Query Output of json/yaml with jq/yq
+kubectl get pods -namespace kubernetes-dashboard kubernetes-dashboard-5996555fd8-vl4bh -o json | jq ".metadata.ownerReferences[]"
+kubectl get pods -namespace kubernetes-dashboard kubernetes-dashboard-5996555fd8-vl4bh -o yaml | yq ".metadata.ownerReferences[]"
