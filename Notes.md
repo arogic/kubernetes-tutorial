@@ -110,3 +110,6 @@ Kubernetes:
 - nginx proxy (loadbalancing)
 - helm package manager
 - role based access control (rbac) with Auth0
+
+# Show lables on pods
+kubectl -n demo get pods --show-lables
