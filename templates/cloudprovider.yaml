@@ -1,4 +1,4 @@
-master $ cat cloudprovider.yaml
+# master $ cat cloudprovider.yaml
 apiVersion: extensions/v1beta1kind: DaemonSet
 metadata:
   name: kube-keepalived-vip
